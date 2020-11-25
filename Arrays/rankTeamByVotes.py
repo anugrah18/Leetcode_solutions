@@ -10,13 +10,13 @@ class Solution:
                 rank[char][i] = rank[char][i]+1
 
         rank = list(rank.items())
-        rank.sort(reverse=True, key=lambda x: (x[1], [ord(x[0])]))
+        rank.sort(reverse=True, key=lambda x: (x[1], [-ord(x[0])]))
 
         rank = [i[0] for i in rank]
         return ''.join(rank)
 
 
 X = Solution()
-print(X.rankTeam(["ABC","ACB","ABC","ACB","ACB"]))
+print(X.rankTeam(["BCA","CAB","CBA","ABC","ACB","BAC"]))
 
 

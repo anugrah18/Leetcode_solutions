@@ -1,8 +1,8 @@
 class TreeNode:
- def __init__(self, val=0, left=None, right=None):
-     self.val = val
-     self.left = left
-     self.right = right
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 def Inorder(root):
     if not root:
@@ -12,20 +12,19 @@ def Inorder(root):
     Inorder(root.right)
 
 class Solution:
-    def buildTree(self, preorder, inorder):
-
+    def buildTree(self, inorder, postorder):
         mapper = {}
         for i, v in enumerate(inorder):
             mapper[v] = i
 
         def helper(low, high):
             if low > high:
-                return
+                return None
 
-            root = TreeNode(preorder.pop(0))
+            root = TreeNode(postorder.pop())
             mid = mapper[root.val]
-            root.left = helper(low, mid - 1)
             root.right = helper(mid + 1, high)
+            root.left = helper(low, mid - 1)
 
             return root
 

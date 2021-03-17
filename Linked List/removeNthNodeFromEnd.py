@@ -12,25 +12,23 @@ class ListNode(object):
 class Solution(object):
     def removeNthFromEnd(self, head, n):
 
-        dummy = ListNode(0, head)
-        ptr1 = dummy
-        ptr2 = dummy
         counter = 0
+        dummyHead = ListNode(0)
+        dummyHead.next = head
+        ptr1 = dummyHead
+        ptr2 = head
 
         while (ptr2):
-            if (counter == n):
-                break
-            counter = counter + 1
-            ptr2 = ptr2.next
+            if (counter < n):
+                ptr2 = ptr2.next
+                counter += 1
+            else:
+                ptr1 = ptr1.next
+                ptr2 = ptr2.next
 
-        while (ptr2):
-            if (ptr2.next == None):
-                ptr1.next = ptr1.next.next
-                break
-            ptr1 = ptr1.next
-            ptr2 = ptr2.next
+        ptr1.next = ptr1.next.next
 
-        return dummy.next
+        return dummyHead.next
 
 LL = ListNode(1)
 LL.next = ListNode(2)

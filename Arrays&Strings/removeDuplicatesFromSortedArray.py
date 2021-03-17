@@ -12,4 +12,4 @@ class Solution(object):
         return i + 1
 
 X =Solution()
-print(X.removeDuplicates([1,1,2,3,3]))
+print(X.removeDuplicates([0,0,1,1,1,2,2,3,3,4]))

@@ -13,22 +13,19 @@ def Inorder(root):
 
 class Solution:
     def buildTree(self, inorder, postorder):
-        mapper = {}
-        for i, v in enumerate(inorder):
-            mapper[v] = i
 
-        def helper(low, high):
-            if low > high:
-                return None
+        def rec(inorder,postorder):
+            if not inorder or not postorder:
+                return
 
             root = TreeNode(postorder.pop())
-            mid = mapper[root.val]
-            root.right = helper(mid + 1, high)
-            root.left = helper(low, mid - 1)
-
+            mid = inorder.index(root.val)
+            root.right = rec(inorder[mid+1:],postorder)
+            root.left = rec(inorder[:mid],postorder)
             return root
 
-        return helper(0, len(inorder) - 1)
+        return rec(inorder,postorder)
+
 
 X= Solution()
 root = X.buildTree([3,9,20,15,7],[9,3,15,20,7])

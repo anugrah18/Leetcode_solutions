@@ -19,6 +19,8 @@ class Solution:
 
         while(i<len(word1) and j<len(word2) and char_compare==0):
             char_compare = ht[word1[i]]-ht[word2[j]]
+            i+=1
+            j+=1
 
         if(char_compare == 0):
             return len(word1)-len(word2)

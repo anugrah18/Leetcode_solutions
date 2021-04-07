@@ -6,7 +6,7 @@ class Solution(object):
         while(N>0):
             if(not fast_forward):
                 if(tuple(cells) in mem):
-                    N = N%mem[tuple(cells)]-N
+                    N = N%(mem[tuple(cells)]-N)
                     fast_forward = True
                 else:
                     mem[tuple(cells)]=N

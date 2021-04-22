@@ -10,8 +10,7 @@ class Solution:
         return s[self._resStart:self._resStart+self._resLength]
 
     def _expandFromMiddle(self,s,left,right):
-        if(s==None or left>right):
-            return 0
+
         while(left>=0 and right<len(s) and s[left]==s[right]):
             left = left-1
             right = right+1

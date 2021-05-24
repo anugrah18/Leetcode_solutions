@@ -18,7 +18,7 @@ class Solution:
                 if not ((next_step[0] >= -2 and x >= -2 and next_step[1] >= -2 and y >= -2) or
                         (next_step[0] <= 2 and x <= 2 and next_step[1] <= 2 and y <= 2) or
                         (next_step[0] >= -2 and x >= -2 and next_step[1] <= 2 and y <= 2) or
-                        (next_step[0] <= 2 and x <= -2 and next_step[1] >= -2 and y >= -2)):
+                        (next_step[0] <= 2 and x <= 2 and next_step[1] >= -2 and y >= -2)):
                     continue
 
                 if next_step not in visited:

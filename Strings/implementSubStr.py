@@ -1,4 +1,5 @@
 class Solution(object):
+    #approach 1
     def strStr(self, haystack, needle):
         if (needle == ""):
             return 0
@@ -17,5 +18,16 @@ class Solution(object):
 
         return -1
 
+    # approach 2
+    def strStr2(self, haystack: str, needle: str) -> int:
+        if haystack == "" and needle == "":
+            return 0
+        else:
+            for i in range(len(haystack)):
+                if haystack[i:i + len(needle)] == needle:
+                    return i
+            return -1
+
 X = Solution()
 print(X.strStr("liver","ve"))
+print(X.strStr2("liver","ve"))

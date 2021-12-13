@@ -20,7 +20,6 @@ class Solution:
             ans = ans + stack.pop()
             if (count > 1):
                 ans = ans + str(count)
-            count = 1
 
         N = min(len(ans), len(chars))
 

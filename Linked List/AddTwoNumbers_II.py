@@ -11,7 +11,8 @@ class ListNode(object):
 
 
 class Solution(object):
-    def addTwoNumbers(self, l1, l2):
+    # Approach 1 - Convert to numbers.
+    def addTwoNumbers_1(self, l1, l2):
 
         n1 = 0
         n2 = 0
@@ -33,6 +34,36 @@ class Solution(object):
 
         return root.next
 
+    # Approach 2 - Convert to stack.
+    def addTwoNumbers_2(self,l1,l2):
+        stack_1 = []
+        stack_2 = []
+
+        while l1:
+            stack_1.append(l1.val)
+            l1 = l1.next
+
+        while l2:
+            stack_2.append(l2.val)
+            l2 = l2.next
+
+        carry = 0
+        newHead = None
+
+        while stack_1 or stack_2 or carry != 0:
+            val1 = stack_1.pop() if stack_1 else 0
+            val2 = stack_2.pop() if stack_2 else 0
+
+            s = val1 + val2 + carry
+
+            node = ListNode(s % 10)
+            carry = s // 10
+
+            node.next = newHead
+            newHead = node
+
+        return newHead
+
 L1 = ListNode(7)
 L1.next = ListNode(2)
 L1.next.next = ListNode(4)
@@ -43,6 +74,8 @@ L2.next = ListNode(6)
 L2.next.next = ListNode(4)
 
 X =Solution()
-L3 = X.addTwoNumbers(L1,L2)
+L3 = X.addTwoNumbers_1(L1,L2)
+L4 = X.addTwoNumbers_2(L1,L2)
 
 L3.printList()
+L4.printList()

@@ -20,11 +20,10 @@ class Solution(object):
 
         while (ptr2):
             if (counter < n):
-                ptr2 = ptr2.next
                 counter += 1
             else:
                 ptr1 = ptr1.next
-                ptr2 = ptr2.next
+            ptr2 = ptr2.next
 
         ptr1.next = ptr1.next.next
 

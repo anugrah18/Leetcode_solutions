@@ -6,7 +6,34 @@ class Node:
 
 
 class Solution:
+    def treeToDoublyListInPlace(self,root: Node) -> Node:
+        # In place solution.
+        if not root:
+            return
+        def dfs(node):
+            nonlocal head,tail
+            if not node:
+                return
+            dfs(node.left)
+            if tail:
+                tail.right = node
+                node.left = tail
+            else:
+                head = node
+            tail = node
+            dfs(node.right)
+
+        head,tail = None,None
+
+        dfs(root)
+        head.left = tail
+        tail.right = head
+
+        return head
+
+
     def treeToDoublyList(self, root: 'Node') -> 'Node':
+        # NOT in place involves creating a new linked list.
         if (root == None):
             return None
 
@@ -54,7 +81,14 @@ while(curr):
     curr= curr.right
     if(curr==ans):
         break
-
+print()
+curr = ans = X.treeToDoublyListInPlace(root)
+loop_print_counter = 0
+while(curr):
+    print(curr.val)
+    curr= curr.right
+    if(curr==ans):
+        break
 
 
 

@@ -13,6 +13,19 @@ def Inorder(root):
 
 class Solution:
     def buildTree(self, preorder, inorder):
+        def rec(inorder, preorder):
+            if not inorder or not preorder:
+                return
+
+            root = TreeNode(preorder.pop(0))
+            mid = inorder.index(root.val)
+            root.left = rec(inorder[:mid], preorder)
+            root.right = rec(inorder[mid + 1:], preorder)
+            return root
+
+        return rec(inorder, preorder)
+
+    def buildTree2(self, preorder, inorder):
 
         mapper = {}
         for i, v in enumerate(inorder):

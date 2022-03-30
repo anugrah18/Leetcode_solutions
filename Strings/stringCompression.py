@@ -1,5 +1,6 @@
 class Solution:
-    def compress(self, chars):
+    #approach 1
+    def compress_1(self, chars):
         stack = []
         count = 1
         ans = ""
@@ -29,9 +30,32 @@ class Solution:
 
         return N
 
-X = Solution()
-print(X.compress(["a","a","b","b","c","c","c"]))
+    # approach 2
+    def compress_2(self, chars):
+        readIndex = writeIndex = 0
 
+        while readIndex < len(chars):
+            count = 0
+            letter = chars[readIndex]
+            while readIndex < len(chars) and chars[readIndex] == letter:
+                readIndex += 1
+                count += 1
+
+            chars[writeIndex] = letter
+            writeIndex += 1
+            if count > 1:
+                for s in str(count):
+                    chars[writeIndex] = s
+                    writeIndex += 1
+
+        return writeIndex
+
+
+
+
+X = Solution()
+print(X.compress_1(["a","a","b","b","c","c","c"]))
+print(X.compress_2(["a","a","b","b","c","c","c"]))
 
 
 

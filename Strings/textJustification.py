@@ -1,47 +1,32 @@
 class Solution:
     def fullJustify(self, words, maxWidth):
-        def leftJustify(words, diff, i, j):
-            spacesOnRight = diff - (j - i - 1)
-            result = words[i]
-            for k in range(i + 1, j):
-                result += " " + words[k]
+        lst = []
+        res = []
+        n = 0
+        for w in words:
 
-            result += " " * spacesOnRight
-            return result
+            while len(w) + n + len(lst) > maxWidth:
+                # Calculate gaps between words in list.
+                gaps = (len(lst) - 1) or 1
 
-        def middleJustify(words, diff, i, j):
-            spaceNeeded = j - i - 1
-            spaces = diff // spaceNeeded
-            extraSpaces = diff % spaceNeeded
+                q, rem = divmod(maxWidth - n, gaps)
 
-            result = words[i]
-            for k in range(i + 1, j):
-                spacesToApply = spaces + (1 if extraSpaces > 0 else 0)
-                extraSpaces -= 1
-                result += " " * spacesToApply + words[k]
+                # Adding spaces for each word in list.
+                for i in range(gaps):
+                    lst[i] += " " * q + (" " if i < rem else "")
 
-            return result
+                # Append line with spaces to result.
+                res.append("".join(lst))
+                # Reset characters length and list.
+                n, lst = 0, []
 
-        i = 0
-        n = len(words)
-        result = []
-        while (i < n):
-            j = i + 1
-            lineLength = len(words[i])
-            while (j < n and (lineLength + len(words[j]) + (j - i - 1) < maxWidth)):
-                lineLength += len(words[j])
-                j += 1
+            # Append words in list.
+            lst.append(w)
+            # Calculating number of characters.
+            n += len(w)
+        # Left justify the result.
+        return res + [" ".join(lst).ljust(maxWidth)] if lst else []
 
-            diff = maxWidth - lineLength
-            numberOfWords = j - i
-            if (numberOfWords == 1 or j >= n):
-                result.append(leftJustify(words, diff, i, j))
-            else:
-                result.append(middleJustify(words, diff, i, j))
-
-            i = j
-
-        return result
 
 
 X = Solution()

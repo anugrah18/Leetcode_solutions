@@ -9,6 +9,7 @@ class Solution:
                 # Calculate gaps between words in list.
                 gaps = (len(lst) - 1) or 1
 
+                # Calculate spaces need based on gaps.
                 q, rem = divmod(maxWidth - n, gaps)
 
                 # Adding spaces for each word in list.

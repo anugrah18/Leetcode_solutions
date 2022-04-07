@@ -10,7 +10,8 @@ class ListNode(object):
             self = self.next
 
 class Solution(object):
-    def mergeTwoLists(self, l1, l2):
+    # Approach 1
+    def mergeTwoLists_1(self, l1, l2):
         answer = ListNode(0)
         merged = answer
         while (l1 and l2):
@@ -32,6 +33,22 @@ class Solution(object):
 
         return merged.next
 
+    # Approach 2
+    def mergeTwoList_2(self, l1, l2):
+        prehead = ListNode(-1)
+        prev = prehead
+        while l1 and l2:
+            if l1.val <= l2.val:
+                prev.next = l1
+                l1 = l1.next
+            else:
+                prev.next = l2
+                l2=l2.next
+            prev = prev.next
+
+        prev.next = l1 if l1 else l2
+        return prehead.next
+
 l1 = ListNode(1)
 l1.next = ListNode(2)
 l1.next.next = ListNode(4)
@@ -41,5 +58,7 @@ l2.next = ListNode(3)
 l2.next.next = ListNode(4)
 
 X = Solution()
-answer = X.mergeTwoLists(l1,l2)
-answer.printList()
+answer1 = X.mergeTwoLists_1(l1, l2)
+answer1.printList()
+answer2 = X.mergeTwoList_2(l1,l2)
+answer2.printList()

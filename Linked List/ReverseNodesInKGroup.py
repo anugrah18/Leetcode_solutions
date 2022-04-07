@@ -46,7 +46,7 @@ class Solution:
         if ktail:
             ktail.next = head
 
-        return new_head if new_head else  head
+        return new_head if new_head else head
 
 
 linklist = ListNode(1)

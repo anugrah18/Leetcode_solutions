@@ -25,7 +25,7 @@ class Solution:
                 rightBoundary(root.right)
                 res.append(root.val)
             elif root.left:
-                leftBoundary(root.left)
+                rightBoundary(root.left)
                 res.append(root.val)
 
         def leaves(root):

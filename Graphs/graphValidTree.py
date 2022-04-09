@@ -20,8 +20,6 @@ class Solution:
             for neighbor in graph[vertice]:
                 if neighbor==parent:
                     continue
-                if neighbor in visited:
-                    return False
                 result = dfs(neighbor,vertice)
                 if not result:
                     return False

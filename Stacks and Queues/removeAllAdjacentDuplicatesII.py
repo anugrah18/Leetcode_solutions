@@ -1,5 +1,21 @@
 class Solution:
-    def RemoveDuplicate(self,s,k):
+    def RemoveDuplicates_I(self, s: str, k: int) -> str:
+        stack = []
+
+        for c in s:
+            if stack and stack[-1][0] == c:
+                stack[-1][1] += 1
+                if stack[-1][1] == k:
+                    stack.pop()
+            else:
+                stack.append([c, 1])
+        ans = ""
+        for x in stack:
+            ans += x[0] * x[1]
+
+        return ans
+
+    def RemoveDuplicates_II(self,s,k):
         stack = []
         i = 0
 
@@ -16,4 +32,5 @@ class Solution:
         return s
 
 X = Solution()
-print(X.RemoveDuplicate("deeedbbcccbdaa",3))
+print(X.RemoveDuplicates_I("deeedbbcccbdaa",3))
+print(X.RemoveDuplicates_II("deeedbbcccbdaa",3))

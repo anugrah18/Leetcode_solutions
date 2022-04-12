@@ -1,5 +1,23 @@
 class Solution:
-    def dailyTemperatures(self,T):
+
+    def dailyTemperatures_I(self,T):
+        # From front
+        ans =[0]*len(T)
+        stack =[]
+
+        for i,t in enumerate(T):
+            while stack and t>stack[-1][0]:
+                temp,ind = stack.pop()
+                ans[ind] = i-ind
+            stack.append([t,i])
+
+        return ans
+
+
+
+
+    def dailyTemperatures_II(self,T):
+        # From behind
         ans =[0]*len(T)
         stack =[]
 
@@ -12,4 +30,5 @@ class Solution:
         return ans
 
 X = Solution()
-print(X.dailyTemperatures([73,74,75,71,69,72,76,73]))
+print(X.dailyTemperatures_I([73,74,75,71,69,72,76,73]))
+print(X.dailyTemperatures_II([73,74,75,71,69,72,76,73]))

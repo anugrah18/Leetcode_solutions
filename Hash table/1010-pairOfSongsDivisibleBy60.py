@@ -1,5 +1,25 @@
 class Solution:
-    def numPairsDivisibleBy60(self,time):
+    def numPairsDivisibleBy60_I(self,time):
+        dict = {}
+        res = 0
+        dict[0] = 0
+
+        for t in time:
+            rem = t % 60
+
+            if not rem:
+                res += dict[0]
+                dict[0] += 1
+            else:
+                if 60 - rem in dict:
+                    res += dict[60 - rem]
+                dict[rem] = dict.get(rem, 0) + 1
+
+        return res
+
+
+
+    def numPairsDivisibleBy60_II(self,time):
         dict = {}
         res = 0
 
@@ -15,4 +35,5 @@ class Solution:
         return res
 
 X = Solution()
-print(X.numPairsDivisibleBy60([30,20,150,100,40]))
+print(X.numPairsDivisibleBy60_I([30,20,150,100,40]))
+print(X.numPairsDivisibleBy60_I([30,20,150,100,40]))

@@ -1,14 +1,14 @@
 class Solution:
-    def minMeetingRooms(self, intervals):
+    def minMeetingRooms(self, intervals) -> int:
         if not intervals:
             return 0
 
-        rooms = 0
+        res, rooms = 0, 0
         startTimings = [0] * len(intervals)
         endTimings = [0] * len(intervals)
-        L = len(intervals)
-        end_pointer = 0
-        start_pointer = 0
+
+        e = 0
+        s = 0
 
         for i in range(len(intervals)):
             startTimings[i] = intervals[i][0]
@@ -19,15 +19,16 @@ class Solution:
         startTimings.sort()
         endTimings.sort()
 
-        while start_pointer < L:
-            if startTimings[start_pointer] >= endTimings[end_pointer]:
+        while s < len(intervals):
+            if startTimings[s] < endTimings[e]:
+                s += 1
+                rooms += 1
+            else:
+                e += 1
                 rooms -= 1
-                end_pointer += 1
+            res = max(rooms, res)
 
-            rooms += 1
-            start_pointer += 1
-
-        return rooms
+        return res
 
 
 X = Solution()

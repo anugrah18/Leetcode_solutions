@@ -1,5 +1,21 @@
 class Solution(object):
-    def lengthOfLongestSubstring(self, s):
+    # Approach 1 : using set.
+    def lengthOfLongestSubstring_I(self, s: str) -> int:
+        cSet = set()
+        ans = 0
+        l = 0
+        for r in range(len(s)):
+            while s[r] in cSet:
+                cSet.remove(s[l])
+                l += 1
+
+            cSet.add(s[r])
+            ans = max(ans, r - l + 1)
+
+        return ans
+
+    # Approach 2 : using hash.
+    def lengthOfLongestSubstring_II(self, s):
         dict = {}
         ans = 0
         i = 0
@@ -17,4 +33,5 @@ class Solution(object):
 
 
 X = Solution()
-print(X.lengthOfLongestSubstring("xcwxcabcxc"))
+print(X.lengthOfLongestSubstring_I("xcwxcabcxc"))
+print(X.lengthOfLongestSubstring_II("xcwxcabcxc"))

@@ -1,7 +1,37 @@
 import heapq
 
 class Solution:
-    def reorganizeString(self,S):
+    def reorganizeString_I(self,s):
+        dict = {}
+        for c in s:
+            dict[c]=dict.get(c,0)-1
+
+        heap = []
+        for k in dict:
+            heap.append([dict[k],k])
+        heapq.heapify(heap)
+
+        prev = None
+        res = ""
+
+        while heap or prev:
+            if prev and not heap:
+                return ""
+            # most frequent,except prev
+            cnt,chr = heapq.heappop(heap)
+            res+=chr
+            cnt+=1
+
+            if prev:
+                heapq.heappush(heap,prev)
+                prev = None
+            if cnt!=0:
+                prev = [cnt,chr]
+
+        return res
+
+
+    def reorganizeString_II(self,S):
 
         dict = {}
 
@@ -38,7 +68,8 @@ class Solution:
             return ""
 
 X = Solution()
-print(X.reorganizeString('abba'))
+print(X.reorganizeString_I('abbaca'))
+print(X.reorganizeString_II('abbaca'))
 
 
 

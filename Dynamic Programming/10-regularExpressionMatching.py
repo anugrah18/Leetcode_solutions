@@ -1,33 +1,24 @@
 class Solution:
     def isMatch(self, s, p):
+        dp = [[False for x in range(len(p) + 1)] for y in range(len(s) + 1)]
 
-        rows, columns = (len(s), len(p))
-        # Base conditions
-        if rows == 0 and columns == 0:
-            return True
-        if columns == 0:
-            return False
-        # DP array
-        dp = [[False for j in range(columns + 1)] for i in range(rows + 1)]
-
-        # Since empty string and empty pattern are a match
         dp[0][0] = True
 
-        # Deals with patterns containing *
-        for i in range(2, columns + 1):
-            if p[i - 1] == '*':
-                dp[0][i] = dp[0][i - 2]
+        for j in range(1, len(dp[0])):
+            if p[j - 1] == "*":
+                dp[0][j] = dp[0][j - 2]
 
-        # For remaining characters
-        for i in range(1, rows + 1):
-            for j in range(1, columns + 1):
-                if s[i - 1] == p[j - 1] or p[j - 1] == '.':
-                    dp[i][j] = dp[i - 1][j - 1]
-                elif j > 1 and p[j - 1] == '*':
+        for i in range(1, len(dp)):
+            for j in range(1, len(dp[i])):
+                if p[j - 1] == "*":
                     dp[i][j] = dp[i][j - 2]
-                    if p[j - 2] == '.' or p[j - 2] == s[i - 1]:
+
+                    if s[i - 1] == p[j - 2] or p[j - 2] == ".":
                         dp[i][j] = dp[i][j] or dp[i - 1][j]
-        return dp[rows][columns]
+                elif p[j - 1] == "." or p[j - 1] == s[i - 1]:
+                    dp[i][j] = dp[i - 1][j - 1]
+
+        return dp[-1][-1]
 
 X = Solution()
 print(X.isMatch("aabacde","a*b.cd."))

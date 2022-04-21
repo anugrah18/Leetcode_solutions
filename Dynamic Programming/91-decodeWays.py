@@ -3,17 +3,18 @@ class Solution(object):
         dp = [0] * (len(s) + 1)
 
         dp[0] = 1
+        if s[0] != "0":
+            dp[1] = 1
 
-        dp[1] = 1 if s[0] != "0" else 0
-
-        for i in range(2, len(dp)):
-            if (s[i - 1] != "0"):
-                dp[i] = dp[i] + dp[i - 1]
-            num = int(s[i - 2:i])
-            if (num >= 10 and num <= 26):
+        for i in range(2, len(s) + 1):
+            one_digit = s[i - 1]
+            if int(one_digit) > 0 and int(one_digit) < 10:
+                dp[i] = dp[i - 1] + dp[i]
+            two_digit = s[i - 2:i]
+            if int(two_digit) >= 10 and int(two_digit) <= 26:
                 dp[i] = dp[i] + dp[i - 2]
 
-        return dp[len(s)]
+        return dp[-1]
 
 X = Solution()
 print(X.numDecodings("125"))

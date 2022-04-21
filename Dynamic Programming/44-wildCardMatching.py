@@ -3,9 +3,9 @@ class Solution:
         if s == p:
             return True
 
-        cols = len(p) + 1
-        rows = len(s) + 1
-        mat = [[False for x in range(rows)] for y in range(cols)]
+        row = len(p) + 1
+        col = len(s) + 1
+        mat = [[False for x in range(col)] for y in range(row)]
 
         # Empty string matches itself
         mat[0][0] = True

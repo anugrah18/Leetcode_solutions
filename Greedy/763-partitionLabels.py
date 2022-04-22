@@ -1,25 +1,22 @@
-class Solution(object):
-    def partitionLabels(self, S):
+class Solution:
+    def partitionLabels(self, s):
+        pos = {}
 
-        if (len(S) == 0):
-            return None
+        for i in range(len(s)):
+            if s[i] not in pos:
+                pos[s[i]] = 0
+            pos[s[i]] = i
 
+        max_part = 0
         ans = []
-        ch = [0] * 26
+        l = r = 0
 
-        # Get last index of that character in String
-        for i in range(len(S)):
-            ch[ord(S[i]) - ord('a')] = i
-
-        start = 0
-        end = 0
-
-        for i in range(len(S)):
-            end = max(end, ch[ord(S[i]) - ord('a')])
-
-            if (i == end):
-                ans.append(end - start + 1)
-                start = end + 1
+        while r < len(s):
+            max_part = max(max_part, pos[s[r]])
+            if r == max_part:
+                ans.append(r - l + 1)
+                l = r + 1
+            r += 1
 
         return ans
 

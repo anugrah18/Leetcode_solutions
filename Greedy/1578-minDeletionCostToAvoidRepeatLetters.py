@@ -1,19 +1,16 @@
 class Solution:
     def minCost(self,s,cost):
-        n = len(s)
-        gsum = gmax = cost[0]
-        ans = 0
+        prev = 0
+        res = 0
+        for i in range(1, len(s)):
+            if s[i - 1] != s[i]:
+                prev = i
+            else:
+                res += min(cost[prev], cost[i])
+                if cost[prev] < cost[i]:
+                    prev = i
 
-        for i in range(1,n):
-            if(s[i]!= s[i-1]):
-                ans += gsum - gmax
-                gsum = 0
-                gmax = 0
+        return res
 
-            gsum += cost[i]
-            gmax = max(gmax,cost[i])
-
-        ans += gsum - gmax
-        return ans
 X= Solution()
 print(X.minCost("abaac",[1,2,3,4,5]))

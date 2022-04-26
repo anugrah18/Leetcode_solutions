@@ -1,6 +1,9 @@
 class Solution(object):
     def singleNumber(self, nums):
-        return 2 * sum(set(nums)) - sum(nums)
+        ans = 0
+        for n in nums:
+            ans = ans ^ n
+        return ans
 
 
 X= Solution()

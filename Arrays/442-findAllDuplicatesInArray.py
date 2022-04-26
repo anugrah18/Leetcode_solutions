@@ -1,17 +1,16 @@
 class Solution:
     def findDuplicates(self, nums):
+        ans = set()
 
-        ans = []
+        for n in nums:
+            if nums[abs(n)-1]<0:
+                ans.add(abs(n))
+            else:
+                nums[abs(n)-1]*=-1
 
-        for num in nums:
-            nums[abs(num) - 1] *= -1
+        return list(ans)
 
-        for num in nums:
-            if (nums[abs(num) - 1] > 0):
-                ans.append(abs(num))
-                nums[abs(num) - 1] *= -1
 
-        return ans
 
 
 X = Solution()

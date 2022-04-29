@@ -18,12 +18,15 @@ class LFUCache:
         if key not in self.nodeKeys:
             return -1
 
+        # Remove from the nodeCount bucket.
         node = self.nodeKeys[key]
         del self.nodeCounts[node.count][key]
 
+        # Remove the zero count bucket.
         if not self.nodeCounts[node.count]:
             del self.nodeCounts[node.count]
 
+        # Add the node in the bucket based on its frequency.
         node.count += 1
         self.nodeCounts[node.count][key] = node
 
@@ -36,15 +39,18 @@ class LFUCache:
         if not self.capacity:
             return
 
+        # Replace value of node with key
         if key in self.nodeKeys:
             self.nodeKeys[key].val = value
             self.get(key)
             return
 
         if len(self.nodeKeys) == self.capacity:
+            # Remove last item within minimum frequency bucket.
             lfuKey, lfuCount = self.nodeCounts[self.minCount].popitem(last=False)
             del self.nodeKeys[lfuKey]
 
+        # Add the item
         newNode = Node(value, 1)
         self.nodeKeys[key] = newNode
         self.nodeCounts[1][key] = newNode

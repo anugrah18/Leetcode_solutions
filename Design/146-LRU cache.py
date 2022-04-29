@@ -1,3 +1,6 @@
+from collections import OrderedDict
+
+
 class DLinkedNode():
     def __init__(self):
         self.key = 0
@@ -5,8 +8,30 @@ class DLinkedNode():
         self.prev = None
         self.next = None
 
+# Using Ordered Dictionary
+class LRUCache_I:
 
-class LRUCache():
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.ordList = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.ordList:
+            return -1
+        self.ordList.move_to_end(key)
+        return self.ordList[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.ordList:
+            self.ordList.move_to_end(key)
+        self.ordList[key] = value
+
+        if len(self.ordList) > self.capacity:
+            self.ordList.popitem(last=False)
+
+
+# Using Double Linked List
+class LRUCache_II():
     def _add_node(self, node):
         """
         Always add the new node right after head.
@@ -96,7 +121,7 @@ class LRUCache():
             node.value = value
             self._move_to_head(node)
 
-LRU = LRUCache(3)
+LRU = LRUCache_I(3)
 print(LRU.put(1,1))
 print(LRU.put(2,2))
 print(LRU.put(3,3))
@@ -104,3 +129,10 @@ print(LRU.get(1))
 print(LRU.put(4,4))
 print(LRU.get(2))
 
+LRU = LRUCache_II(3)
+print(LRU.put(1,1))
+print(LRU.put(2,2))
+print(LRU.put(3,3))
+print(LRU.get(1))
+print(LRU.put(4,4))
+print(LRU.get(2))

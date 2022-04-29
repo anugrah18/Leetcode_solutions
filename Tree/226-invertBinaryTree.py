@@ -6,15 +6,35 @@ class TreeNode(object):
         self.right = right
 
 class Solution(object):
-    def invertTree(self, root):
+    # Using Recursion.
+    def invertTree_I(self, root):
         if not root:
             return None
 
-        left = self.invertTree(root.left)
-        right = self.invertTree(root.right)
+        left = self.invertTree_I(root.left)
+        right = self.invertTree_I(root.right)
 
         root.left = right
         root.right = left
+
+        return root
+
+    # Using Iterations.
+    def invertTree_II(self, root):
+        if not root:
+            return None
+
+        queue =[]
+        queue.append(root)
+        while queue:
+            current = queue.pop(0)
+            current.left, current.right = current.right, current.left
+
+            if current.left:
+                queue.append(current.left)
+
+            if current.right:
+                queue.append(current.right)
 
         return root
 
@@ -28,5 +48,6 @@ tree.right.left = TreeNode(6)
 tree.right.right = TreeNode(9)
 
 X =Solution()
-invertTree= X.invertTree(tree)
-
+invertTree1= X.invertTree_I(tree)
+invertTree2= X.invertTree_II(tree)
+print(invertTree1==invertTree2)

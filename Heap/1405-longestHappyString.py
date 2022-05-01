@@ -1,33 +1,36 @@
 import heapq
+
+
 class Solution:
-    def longestDiverseString(self, a, b, c) -> str:
-        res, maxHeap = "", []
-        dict = {}
-        dict["a"] = -a
-        dict["b"] = -b
-        dict["c"] = -c
+    def longestDiverseString(self, a: int, b: int, c: int) -> str:
+        freq = []
+        if a > 0:
+            freq.append([-a, 'a'])
+        if b > 0:
+            freq.append([-b, 'b'])
+        if c > 0:
+            freq.append([-c, 'c'])
 
-        for k in dict:
-            if dict[k] != 0:
-                heapq.heappush(maxHeap, (dict[k], k))
-
-        while maxHeap:
-            count, char = heapq.heappop(maxHeap)
-            if len(res) > 1 and res[-1] == res[-2] == char:
-                if not maxHeap:
+        heapq.heapify(freq)
+        ans = ""
+        while freq:
+            cnt, char = heapq.heappop(freq)
+            if len(ans) > 1 and ans[-1] == ans[-2] == char:
+                if not freq:
                     break
-                count2, char2 = heapq.heappop(maxHeap)
-                res += char2
-                count2 += 1
-                if count2:
-                    heapq.heappush(maxHeap, (count2, char2))
+                cnt2, char2 = heapq.heappop(freq)
+                ans += char2
+                cnt2 += 1
+                if cnt2:
+                    heapq.heappush(freq, [cnt2, char2])
             else:
-                res += char
-                count += 1
-            if count:
-                heapq.heappush(maxHeap, (count, char))
+                ans += char
+                cnt += 1
+            if cnt:
+                heapq.heappush(freq, [cnt, char])
 
-        return res
+        return ans
+
 
 X = Solution()
 print(X.longestDiverseString(1,1,7))

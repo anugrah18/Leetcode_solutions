@@ -11,7 +11,7 @@ class Solution(object):
 
         for d in dict:
             if (d!=0):
-                return  False
+                return False
 
         return True
 

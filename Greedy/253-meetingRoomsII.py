@@ -1,20 +1,14 @@
 class Solution:
     def minMeetingRooms(self, intervals) -> int:
-        if not intervals:
-            return 0
-
         res, rooms = 0, 0
-        startTimings = [0] * len(intervals)
-        endTimings = [0] * len(intervals)
+        startTimings, endTimings = [], []
 
         e = 0
         s = 0
 
         for i in range(len(intervals)):
-            startTimings[i] = intervals[i][0]
-
-        for i in range(len(intervals)):
-            endTimings[i] = intervals[i][1]
+            startTimings.append(intervals[i][0])
+            endTimings.append(intervals[i][1])
 
         startTimings.sort()
         endTimings.sort()

@@ -18,3 +18,7 @@ class Solution(object):
 
 X =Solution()
 print(X.plusOne([9,9]))
+
+
+# Time complexity : O(N)
+# Space complexity : O(1)

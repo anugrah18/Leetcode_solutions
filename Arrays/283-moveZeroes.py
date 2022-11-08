@@ -12,3 +12,5 @@ nums = [1,0,2,3,5,0,7,9]
 X.moveZeroes((nums))
 print(nums)
 
+# Time Complexity : O(N)
+# Space Complexity : O(1)

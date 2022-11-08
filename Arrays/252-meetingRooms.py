@@ -10,3 +10,6 @@ class Solution:
 
 X =Solution()
 print(X.canAttendMeetings([[0,30],[5,10],[15,20]]))
+
+# Time Complexity : O(NlogN)
+# Space Complexity : O(1)

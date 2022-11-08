@@ -12,3 +12,7 @@ X =Solution()
 stockPrices = [7,1,55,3,6,24]
 
 print(X.maxProfit(stockPrices))
+
+# Time Complexity : O(n)
+
+# Space Complexity = O(1)

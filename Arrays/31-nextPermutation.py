@@ -22,3 +22,6 @@ class Solution:
 
 X =Solution()
 print(X.nextPermutation([1,2,3]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

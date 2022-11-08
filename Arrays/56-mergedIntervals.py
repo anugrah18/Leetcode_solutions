@@ -13,3 +13,7 @@ class Solution(object):
 
 X = Solution()
 print(X.merge([[1,5],[2,9],[13,15]]))
+
+# Time complexity : O(nlogn)
+
+# Space complexity : O(n)

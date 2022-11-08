@@ -8,3 +8,6 @@ class Solution(object):
 
 X =Solution()
 print(X.rotate([1,2,3,4,5,6,7],4))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

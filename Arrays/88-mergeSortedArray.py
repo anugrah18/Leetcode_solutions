@@ -19,3 +19,5 @@ class Solution(object):
         nums1[:p2 + 1] = nums2[:p2 + 1]
 
 
+# Time Complexity : O(n+m)
+# Space Complexity : O(m)

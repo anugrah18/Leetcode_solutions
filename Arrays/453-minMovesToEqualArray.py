@@ -10,3 +10,5 @@ class Solution:
 X =Solution()
 print(X.minMoves([1,2,3]))
 
+# Time Complexity : O(NlogN)
+# Space complexity : O(1)

@@ -33,3 +33,6 @@ class Solution:
 
 X = Solution()
 print(X.spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

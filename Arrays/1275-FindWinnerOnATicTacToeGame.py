@@ -25,3 +25,6 @@ class Solution:
 
 X = Solution()
 print(X.tictactoe([[0,0],[2,0],[1,1],[2,1],[2,2]]))
+
+# Time Complexity : O(m) , m = length of moves
+# Space Complexity : O(n) , n = length of board

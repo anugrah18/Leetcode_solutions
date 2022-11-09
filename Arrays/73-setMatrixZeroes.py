@@ -32,3 +32,6 @@ matrix = [[1,1,1],[1,0,1],[1,1,1]]
 print(matrix)
 print(X.setZeroes(matrix))
 print(matrix)
+
+# Time Complexity : O(MXN)
+# Space Complexity : O(1)

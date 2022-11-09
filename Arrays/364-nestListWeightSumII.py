@@ -11,7 +11,10 @@ class Solution:
             curr_depth=1
             for x in nestedList:
                 if isinstance(x,int)==False:
-                    curr_depth = max(curr_depth,1+depth(getList(x)))
+                    if getList(x):
+                        curr_depth = max(curr_depth,1+depth(getList(x)))
+                    else:
+                        curr_depth = max(curr_depth, depth(getList(x)))
             return curr_depth
 
         def dfs(lt,lvl,max_depth):
@@ -29,3 +32,6 @@ class Solution:
 
 X = Solution()
 print(X.depthSum([1,[4,[6]]]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

@@ -16,3 +16,6 @@ X = Solution()
 print(matrix)
 X.rotate(matrix)
 print(matrix)
+
+# Time Complexity : O(MXN)
+# Space Complexity : O(1)

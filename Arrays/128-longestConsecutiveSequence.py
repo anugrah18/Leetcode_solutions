@@ -14,3 +14,6 @@ class Solution:
 
 X = Solution()
 print(X.longestConsecutive([100,4,200,1,3,2]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

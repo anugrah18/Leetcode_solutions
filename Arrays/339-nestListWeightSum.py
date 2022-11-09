@@ -20,3 +20,6 @@ class Solution:
 
 X = Solution()
 print(X.depthSum([1,[4,[6]]]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

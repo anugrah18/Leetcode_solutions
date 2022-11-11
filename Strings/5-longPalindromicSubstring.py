@@ -21,3 +21,8 @@ class Solution:
 
 X = Solution()
 print(X.longestPalindrome("bhdbabbajnfjnfg"))
+
+
+# Time Complexity : O(N^2)
+# Space Complexity : O(1)
+

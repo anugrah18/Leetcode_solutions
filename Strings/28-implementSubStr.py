@@ -1,5 +1,7 @@
 class Solution(object):
     #approach 1
+    # Time Complexity : O(m)
+    # Space Complexity : O(1)
     def strStr(self, haystack, needle):
         if (needle == ""):
             return 0
@@ -19,6 +21,8 @@ class Solution(object):
         return -1
 
     # approach 2
+    # Time Complexity : O(m) , m=len(haystack)
+    # Space Complexity : O(1)
     def strStr2(self, haystack: str, needle: str) -> int:
         if haystack == "" and needle == "":
             return 0
@@ -31,3 +35,4 @@ class Solution(object):
 X = Solution()
 print(X.strStr("liver","ve"))
 print(X.strStr2("liver","ve"))
+

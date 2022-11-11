@@ -33,3 +33,6 @@ class Solution:
 
 X = Solution()
 print(X.validIPAddress("192.168.0.1"))
+
+# Time complexity : O(N)
+# Space complexity : O(1)

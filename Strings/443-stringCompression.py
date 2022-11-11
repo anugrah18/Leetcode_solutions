@@ -1,36 +1,35 @@
 class Solution:
     #approach 1
+    # Time Complexity : O(N)
+    # Space Complexity : O(N)
     def compress_1(self, chars):
-        stack = []
-        count = 1
         ans = ""
-
+        count = 0
         for c in chars:
-            if len(stack) == 0:
-                stack.append(c)
-            elif c in stack[-1]:
+            if len(ans) == 0:
+                ans += c
+                count = 1
+            elif ans[-1] == c:
                 count += 1
             else:
-                ans = ans + stack.pop()
-                if (count > 1):
-                    ans = ans + str(count)
+                if count != 1:
+                    ans += str(count)
+                ans += c
                 count = 1
-                stack.append(c)
 
-        if (len(stack) != 0):
-            ans = ans + stack.pop()
-            if (count > 1):
-                ans = ans + str(count)
+        if count != 1:
+            ans += str(count)
 
         N = min(len(ans), len(chars))
 
-        if (N == len(ans)):
+        if N == len(ans):
             for i in range(0, N):
                 chars[i] = ans[i]
-
         return N
 
     # approach 2
+    # Time Complexity : O(N)
+    # Space Complexity : O(1)
     def compress_2(self, chars):
         readIndex = writeIndex = 0
 

@@ -20,3 +20,5 @@ X = Solution()
 print(X.rankTeam(["BCA","CAB","CBA","ABC","ACB","BAC"]))
 
 
+# Time Complexity : O((M)log(M)) + O(NM) , M = number of votes , N = Number of teams
+# Space Complexity : O(N^2) , N=number of teams

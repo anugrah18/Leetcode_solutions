@@ -14,3 +14,7 @@ class Solution(object):
 
 X = Solution()
 print(X.longestCommonPrefix(["flower","flow","flight"]))
+
+
+# Time complexity : O(N) , where N is sum of all characters in all strings
+# Space complexity : O(1)

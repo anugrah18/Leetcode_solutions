@@ -11,3 +11,6 @@ class Solution:
 
 X = Solution()
 print(X.reorderLogFiles(["dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"]))
+
+# Time Complexity : O(MNLogN) , sorting takes NLogN and comparing two keys will O(M) with N = num of logs and M = max length of logs
+# Space Complexity : O(MN)

@@ -15,3 +15,7 @@ class Solution:
 
 X = Solution()
 print(X.shortestDistance(["practice", "makes", "perfect", "coding", "makes"],"coding","practice"))
+
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

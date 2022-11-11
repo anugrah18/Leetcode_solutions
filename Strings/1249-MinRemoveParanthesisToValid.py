@@ -1,5 +1,7 @@
 class Solution:
     # Approach 1 Using Stack and string builder.
+    # Time Complexity = O(N)
+    # Space Complexity = O(N)
     def minRemoveToMakeValid_1(self,s):
         index_to_remove = set()
         stack = []
@@ -22,7 +24,9 @@ class Solution:
 
         return "".join(ans)
 
-    #Approach 2 Using two pass string builder.
+    # Approach 2 Using two pass string builder.
+    # Time Complexity = O(N)
+    # Space Complexity = O(N)
     def minRemoveToMakeValid_2(self,s):
         def delete_invalid_close(string,open,close):
             new_s = []

@@ -1,15 +1,27 @@
 class Solution:
     def reverseWords(self,s):
-        s=s.split(" ")
-        cleaned_s = []
-
+        clean_s = []
+        temp = ""
         for c in s:
-            if c!="":
-                cleaned_s.append(c)
+            if c == " ":
+                if temp != " ":
+                    clean_s.append(temp)
+                    temp = ""
+            else:
+                temp += c
 
-        cleaned_s = cleaned_s[::-1]
+        if temp != "":
+            clean_s.append(temp)
 
-        return " ".join(cleaned_s)
+        no_space_s = []
+        for w in clean_s:
+            if w != "":
+                no_space_s.append(w)
+
+        return " ".join(no_space_s[::-1])
 
 X= Solution()
 print(X.reverseWords("    Hello    World"))
+
+# Time Complexity = O(N)
+# Space Complexity = O(N)

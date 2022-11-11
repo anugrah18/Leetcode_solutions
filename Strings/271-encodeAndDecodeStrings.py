@@ -27,3 +27,8 @@ Y = X.encode(["Hello","World"])
 Z = Z.decode(Y)
 print(Y)
 print(Z)
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)
+
+

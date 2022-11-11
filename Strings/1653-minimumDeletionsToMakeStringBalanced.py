@@ -21,3 +21,6 @@ class Solution:
 
 X = Solution()
 print(X.minimumDeletions("aababbab"))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

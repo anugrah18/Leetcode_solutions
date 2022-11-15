@@ -18,3 +18,6 @@ class Solution:
 
 X = Solution()
 print(X.maxNumberOfBalloons("loonbalxballpoon"))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

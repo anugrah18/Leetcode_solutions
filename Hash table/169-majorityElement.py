@@ -18,3 +18,6 @@ class Solution(object):
 X =Solution()
 seq = [2,2,1,1,1,2,2]
 print(X.majorityElement(seq))
+
+# Time Complexity = O(N)
+# Space Complexity = O(N)

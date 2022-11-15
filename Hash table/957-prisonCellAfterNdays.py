@@ -31,3 +31,6 @@ class Solution(object):
 
 X = Solution()
 print(X.prisonCellAfterNDays([0,1,0,1,1,0,0,1],7))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

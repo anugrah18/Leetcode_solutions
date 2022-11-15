@@ -15,3 +15,6 @@ class Solution(object):
 X = Solution()
 print(X.topKFrequent(["i", "love", "leetcode", "i", "love", "coding"],
 2))
+
+# Time Complexity : O(NLogN)
+# Space Complexity : O(N)

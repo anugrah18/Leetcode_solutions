@@ -21,3 +21,6 @@ nums1 = [1,2,2,1]
 nums2 = [2,2]
 answer = X.intersect(nums1,nums2)
 print(answer)
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

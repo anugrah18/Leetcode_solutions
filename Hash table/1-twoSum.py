@@ -13,4 +13,5 @@ answer = x.twoSum([2, 7, 11, 15],9)
 print(answer)
 
 
-
+# Time Complexity : O(N)
+# Space Complexity : O(N)

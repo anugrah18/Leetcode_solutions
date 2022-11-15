@@ -19,3 +19,5 @@ strCollection = ["a","b","ba","bca","bda","bdca","fkbdca","fbdca"]
 X = Solution()
 print(X.longestStrChain(strCollection))
 
+# Time Complexity = O(NLogN) + O(NL) = O(N(LogN + L)) , N = number of words , L = length of longest word
+# Space Complexity = O(N)

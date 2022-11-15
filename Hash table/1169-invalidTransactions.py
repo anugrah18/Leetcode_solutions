@@ -31,5 +31,8 @@ class Solution:
 X = Solution()
 print(X.invalidTransactions(["alice,20,800,mtv","alice,50,100,beijing"]))
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)
+
 
 

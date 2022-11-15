@@ -27,3 +27,6 @@ class Solution:
 
 X = Solution()
 print(X.isAlienSorted(["hello","leetcode"],"hlabcdefgijkmnopqrstuvwxyz"))
+
+# Time Complexity : O(M) , M = total number of characters in words , N = length of order
+# Space Complexity : O(N)

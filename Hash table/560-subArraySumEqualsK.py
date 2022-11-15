@@ -17,3 +17,6 @@ class Solution(object):
 
 X =Solution()
 print(X.subarraySum([1,2,5,-2,-5,7,8],8))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

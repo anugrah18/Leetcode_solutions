@@ -11,3 +11,6 @@ class Solution:
 
 X = Solution()
 print(X.containsDuplicate([1,2,3,1,4]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

@@ -24,3 +24,6 @@ class TimeMap:
 
 obj = TimeMap()
 print(obj.set("foo","bar",1),obj.get("foo",1),obj.get("foo",3),obj.set("foo","bar2",4),obj.get("foo",4),obj.get("foo",5))
+
+# Time Complexity : set() - O(L) , get() - O(T) , t= timestamps
+# Space Complexity : O(L)

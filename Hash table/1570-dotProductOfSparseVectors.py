@@ -19,3 +19,6 @@ class SparseVector:
 V1 = SparseVector([1,0,0,2,3])
 V2 = SparseVector([0,3,0,4,0])
 print(V1.dotProduct(V2))
+
+# Time Complexity : O(n)
+# Space Complexity : O(m) , m being only non zero elements

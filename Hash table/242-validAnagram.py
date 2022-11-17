@@ -19,6 +19,9 @@ class Solution(object):
 x = Solution()
 print(x.isAnagram('god','dog'))
 
+# Time Complexity : O(N)
+# Space Complexity : O(1)
+
 
 
 

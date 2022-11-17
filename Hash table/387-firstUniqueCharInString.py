@@ -17,4 +17,6 @@ class Solution(object):
 X = Solution()
 print(X.firstUniqChar("leetcode"))
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)
 

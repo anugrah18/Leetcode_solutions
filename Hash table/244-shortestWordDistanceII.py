@@ -23,3 +23,6 @@ class WordDistance:
 X = WordDistance(["practice", "makes", "perfect", "coding", "makes"])
 print(X.shortest("coding", "practice"))
 print(X.shortest("makes","coding"))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

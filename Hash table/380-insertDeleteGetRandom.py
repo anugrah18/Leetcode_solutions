@@ -37,3 +37,5 @@ print(randomizedSet.remove(1))
 print(randomizedSet.insert(2))
 print(randomizedSet.getRandom())
 
+# Time Complexity : O(1)
+# Space Complexity : O(N)

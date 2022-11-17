@@ -18,3 +18,6 @@ class Solution:
         return res
 X = Solution()
 print(X.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+
+# Time Complexity : O(NKLogK) , N = length of strs , K = maximum length of string in strs
+# Space Complexity : O(NK)

@@ -37,3 +37,6 @@ class Solution:
 X = Solution()
 print(X.numPairsDivisibleBy60_I([30,20,150,100,40]))
 print(X.numPairsDivisibleBy60_I([30,20,150,100,40]))
+
+# Time Complexity : O(N)
+# Space Complexity : (1)

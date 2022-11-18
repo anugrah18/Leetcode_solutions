@@ -10,31 +10,9 @@ class ListNode(object):
             self = self.next
 
 class Solution(object):
-    # Approach 1
-    def mergeTwoLists_1(self, l1, l2):
-        answer = ListNode(0)
-        merged = answer
-        while (l1 and l2):
-            if (l1.val < l2.val):
-                newNode = ListNode(l1.val)
-                answer.next = newNode
-                answer = answer.next
-                l1 = l1.next
-            else:
-                newNode = ListNode(l2.val)
-                answer.next = newNode
-                answer = answer.next
-                l2 = l2.next
-
-        if (l1 == None):
-            answer.next = l2
-        else:
-            answer.next = l1
-
-        return merged.next
-
-    # Approach 2
-    def mergeTwoList_2(self, l1, l2):
+    # Time Complexity : O(N)
+    # Space Complexity : O(1)
+    def mergeTwoLists(self, l1, l2):
         prehead = ListNode(-1)
         prev = prehead
         while l1 and l2:
@@ -58,7 +36,5 @@ l2.next = ListNode(3)
 l2.next.next = ListNode(4)
 
 X = Solution()
-answer1 = X.mergeTwoLists_1(l1, l2)
+answer1 = X.mergeTwoLists(l1, l2)
 answer1.printList()
-answer2 = X.mergeTwoList_2(l1,l2)
-answer2.printList()

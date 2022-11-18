@@ -35,6 +35,8 @@ class Solution(object):
         return root.next
 
     # Approach 2 - Convert to stack.
+    # Time Complexity : O(N) , N = max length of two lists
+    # Space Complexity : O(N) , N = max length of two lists
     def addTwoNumbers_2(self,l1,l2):
         stack_1 = []
         stack_2 = []

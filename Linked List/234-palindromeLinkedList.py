@@ -41,3 +41,5 @@ ll.next = ListNode(2)
 ll.next = ListNode(1)
 print(X.isPalindrome(ll))
 
+# Time Complexity : O(N)
+# Space Complexity : O(1)

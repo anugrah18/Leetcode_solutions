@@ -67,3 +67,8 @@ while(res):
     print(res.val)
     res= res.next
 
+
+# Time Complexity: O(N)
+# Space Complexity : O(N)
+
+

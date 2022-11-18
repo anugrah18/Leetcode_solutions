@@ -28,3 +28,6 @@ list.next.next.next = ListNode(4)
 list.next.next.next.next = list.next
 
 print(X.hasCycle(list))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

@@ -38,8 +38,8 @@ X = Solution()
 rotatedNode = X.rotateRight(node,2)
 print(rotatedNode.val)
 
-
-
+# Time Complexity : O(N)
+# Space Complexity : O(1)
 
 
 

@@ -6,36 +6,20 @@ class ListNode(object):
 
 class Solution(object):
     def partition(self, head, x):
-        node1 = ListNode()
-        node2 = ListNode()
+        res1 = first = ListNode(0)
+        res2 = second = ListNode(0)
 
-        ptr = head
-        ptr1 = node1
-        ptr2 = node2
-
-        while (ptr):
-            if (ptr.val < x):
-                ptr1.next = ListNode(ptr.val)
-                ptr1 = ptr1.next
+        while (head):
+            if head.val < x:
+                res1.next = ListNode(head.val)
+                res1 = res1.next
             else:
-                ptr2.next = ListNode(ptr.val)
-                ptr2 = ptr2.next
-            ptr = ptr.next
+                res2.next = ListNode(head.val)
+                res2 = res2.next
+            head = head.next
 
-        ptr1 = node1
-        ptr2 = node2
-
-        if (ptr1.next == None):
-            return ptr2.next
-        elif (ptr2.next == None):
-            return ptr1.next
-        else:
-            while (ptr1.next):
-                ptr1 = ptr1.next
-
-            ptr1.next = ptr2.next
-
-        return node1.next
+        res1.next = second.next
+        return first.next
 
 node = ListNode(1)
 node.next = ListNode(4)
@@ -46,3 +30,13 @@ node.next.next.next.next.next = ListNode(2)
 
 X = Solution()
 resNode = X.partition(node,3)
+
+curr = resNode
+
+while curr:
+    print(curr.val)
+    curr = curr.next
+
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

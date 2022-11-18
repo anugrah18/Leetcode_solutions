@@ -28,3 +28,6 @@ LL.next.next.next.next = ListNode(5)
 X =Solution()
 Partitioned_LL = X.middleNode(LL)
 Partitioned_LL.printList()
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

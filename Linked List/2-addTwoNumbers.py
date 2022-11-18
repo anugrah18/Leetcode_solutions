@@ -51,3 +51,5 @@ res = X.addTwoNumbers(list1,list2)
 
 res.printList()
 
+# Time Complexity : O(N) , N = max length of two lists
+# Space Complexity : O(N) , N = max length of two lists

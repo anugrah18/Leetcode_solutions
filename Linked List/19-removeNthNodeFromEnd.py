@@ -40,5 +40,8 @@ answer =X.removeNthFromEnd(LL,2)
 answer.printList()
 
 
+# Time Complexity : O(N)
+# Space Complexity : O(1)
+
 
 

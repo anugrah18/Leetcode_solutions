@@ -34,3 +34,6 @@ LL.next.next.next.next.next.next = ListNode(6)
 
 new_LL = X.removeElements(LL,6)
 new_LL.printList()
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

@@ -34,3 +34,6 @@ X = Solution()
 rev = X.reverseList(list)
 
 rev.printList()
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

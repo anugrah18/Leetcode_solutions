@@ -27,5 +27,7 @@ while(head):
     print(head.val)
     head=head.next
 
+# Time Complexity = O(N)
+# Space Complexity = O(1)
 
 

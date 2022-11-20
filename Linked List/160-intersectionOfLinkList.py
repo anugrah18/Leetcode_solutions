@@ -32,3 +32,6 @@ LL2.next.next = LL1.next
 
 X = Solution()
 print(X.getIntersectionNode(LL1,LL2).val)
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

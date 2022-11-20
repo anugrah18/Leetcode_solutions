@@ -28,7 +28,7 @@ class Solution(object):
                 list2 = list2.next
                 tail = tail.next
 
-            tail.next = list1 if list1 != None else list2
+        tail.next = list1 if list1 != None else list2
 
         return dummyHead.next
 
@@ -55,3 +55,11 @@ node.next.next.next.next = ListNode(4)
 
 X = Solution()
 ans = X.sortList(node)
+
+ptr = ans
+while ptr:
+    print(ptr.val)
+    ptr = ptr.next
+
+# Time Complexity = O(NLogN)
+# Space Complexity = o(1)

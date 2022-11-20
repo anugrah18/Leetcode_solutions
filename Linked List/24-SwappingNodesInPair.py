@@ -37,4 +37,7 @@ X = Solution()
 new_LL = X.swapPairs(LL)
 new_LL.printList()
 
+# Time Complexity : O(N)
+# Space Complexity : O(1)
+
 

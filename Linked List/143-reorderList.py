@@ -18,15 +18,24 @@ class Solution:
 
         # Reverse the second part of list in-place
         prev, curr = None, slow
+
         while curr:
-            curr.next, prev, curr = prev, curr, curr.next
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
 
         # Merge two sorted Link List
         first, second = head, prev
 
         while second.next:
-            first.next, first = second, first.next
-            second.next, second = first, second.next
+            temp = first.next
+            first.next = second
+            first = temp
+
+            temp = second.next
+            second.next = first
+            second = temp
 
 X = Solution()
 Node = ListNode()
@@ -41,3 +50,8 @@ X.reorderList(ans)
 while(ans):
     print(ans.val)
     ans = ans.next
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)
+
+

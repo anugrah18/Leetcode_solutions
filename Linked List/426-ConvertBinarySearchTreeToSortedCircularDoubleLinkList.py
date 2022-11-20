@@ -8,6 +8,8 @@ class Node:
 class Solution:
     def treeToDoublyListInPlace(self,root: Node) -> Node:
         # In place solution.
+        # Time Complexity : O(N)
+        # Space Complexity : O(1)
         if not root:
             return
         def dfs(node):
@@ -34,6 +36,9 @@ class Solution:
 
     def treeToDoublyList(self, root: 'Node') -> 'Node':
         # NOT in place involves creating a new linked list.
+        # In place solution.
+        # Time Complexity : O(N)
+        # Space Complexity : O(N)
         if (root == None):
             return None
 

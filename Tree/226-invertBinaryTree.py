@@ -51,3 +51,6 @@ X =Solution()
 invertTree1= X.invertTree_I(tree)
 invertTree2= X.invertTree_II(tree)
 print(invertTree1==invertTree2)
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

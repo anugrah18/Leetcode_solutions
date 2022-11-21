@@ -26,3 +26,6 @@ root2.right = TreeNode(3)
 
 X = Solution()
 print(X.isSameTree(root1,root2))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

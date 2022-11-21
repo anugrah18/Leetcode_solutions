@@ -46,3 +46,6 @@ tree.right.right = TreeNode(7)
 
 X = Solution()
 print(X.zigzagLevelOrder(tree))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

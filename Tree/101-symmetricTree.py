@@ -25,3 +25,6 @@ tree.right.left = TreeNode(4)
 tree.right.right = TreeNode(3)
 
 print(X.isSymmetric(tree))
+
+# Time Complexity: O(N)
+# Space Complexity : O(N)

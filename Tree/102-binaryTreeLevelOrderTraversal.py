@@ -37,3 +37,6 @@ root.right.right = TreeNode(7)
 X = Solution()
 ans = X.levelOrder(root)
 print(ans)
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

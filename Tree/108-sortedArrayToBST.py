@@ -24,3 +24,6 @@ class Solution(object):
 X = Solution()
 Tree = X.sortedArrayToBST([1,2,3,4,5])
 print(Tree.val)
+
+# Time Complexity : O(N)
+# Space Complexity : O(logN)

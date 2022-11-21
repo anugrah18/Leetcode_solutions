@@ -43,3 +43,5 @@ tree.right.left = TreeNode(6)
 X = Solution()
 print(X.checkCompleted(tree))
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)

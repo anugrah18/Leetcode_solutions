@@ -34,3 +34,6 @@ root.right.right.right = TreeNode(8)
 
 X = Solution()
 print(X.diameterOfBinaryTree(root))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

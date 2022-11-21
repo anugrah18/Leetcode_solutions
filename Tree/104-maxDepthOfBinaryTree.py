@@ -40,6 +40,9 @@ tree.right.left.left = Node(25)
 print(tree.maxDepth(tree))
 print(tree.maxDepth_II(tree))
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)
+
 
 
 

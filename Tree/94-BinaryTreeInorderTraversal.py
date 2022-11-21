@@ -31,4 +31,7 @@ X= Solution()
 lt = X.inorderTraversal(Tree)
 print(lt)
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)
+
 

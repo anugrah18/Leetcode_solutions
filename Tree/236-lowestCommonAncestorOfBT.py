@@ -39,4 +39,7 @@ ans = Solution()
 
 print(ans.lowestCommonAncestor(tree,Node1,Node2).val)
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)
+
 

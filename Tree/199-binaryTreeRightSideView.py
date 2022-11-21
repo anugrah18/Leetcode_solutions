@@ -40,3 +40,6 @@ tree.right.right = TreeNode(4)
 
 X  = Solution()
 print(X.rightSideView(tree))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

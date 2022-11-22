@@ -56,3 +56,6 @@ root.right.left.right = TreeNode(10)
 
 X = Solution()
 print(X.boundaryOfBinaryTree(root))
+
+# Time Complexity : O(n)
+# Space Complexity : O(n)

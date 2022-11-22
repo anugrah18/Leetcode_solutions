@@ -35,3 +35,6 @@ subRoot.right = TreeNode(2)
 
 X = Solution()
 print(X.isSubtree(root,subRoot))
+
+# Time Complexity : O(MN) , M = number of nodes in subTree , N = Number of nodes in Tree
+# Space Complexity : O(M+N)

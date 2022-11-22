@@ -30,3 +30,6 @@ root.right.right = TreeNode(5)
 
 X =Solution()
 print(X.goodNodes(root))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

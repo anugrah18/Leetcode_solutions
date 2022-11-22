@@ -27,3 +27,6 @@ root.right = TreeNode(3)
 
 X = Solution()
 print(X.isValidBST(root))
+
+# Time Complexity = O(N)
+# Space Complexity = O(1)

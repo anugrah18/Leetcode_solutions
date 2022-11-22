@@ -32,3 +32,6 @@ root.right.right = TreeNode(18)
 
 X = Solution()
 print(X.rangeSumBST(root,7,15))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

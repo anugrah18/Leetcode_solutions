@@ -23,3 +23,6 @@ root.left = TreeNode(0)
 root.right = TreeNode(0)
 X = Solution()
 print(X.distributeCoins(root))
+
+# Time Complexity : O(N)
+# Space Complexity : O(H) , H = height of the tree

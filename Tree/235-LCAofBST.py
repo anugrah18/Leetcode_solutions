@@ -26,3 +26,6 @@ root.right.right = TreeNode(9)
 
 X = Solution()
 print(X.lowestCommonAncestor(root,p,q).val)
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

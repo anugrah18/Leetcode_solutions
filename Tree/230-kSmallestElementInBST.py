@@ -26,3 +26,5 @@ root.left.right = TreeNode(2)
 X = Solution()
 print(X.kthSmallest(root,1))
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)

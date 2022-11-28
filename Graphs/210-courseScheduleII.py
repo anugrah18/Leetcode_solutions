@@ -38,6 +38,7 @@ class Solution(object):
 X = Solution()
 print(X.findOrder(4,[[1,0],[2,0],[3,1],[3,2]]))
 
-
+# Time Complexity : O(E+V), V = number of courses , E = number of dependencies
+# Space Complexity : O(E+V)
 
 

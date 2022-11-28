@@ -31,3 +31,6 @@ class Solution:
 
 X = Solution()
 print(X.findCelebrity(3))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

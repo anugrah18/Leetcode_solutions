@@ -31,3 +31,6 @@ class Solution:
 
 X = Solution()
 print(X.validTree(5,[[0,1],[0,2],[0,3],[1,4]]))
+
+# Time Complexity : O(N+E) , N = number of nodes , E = number of edges
+# Space Complexity : O(N+E)

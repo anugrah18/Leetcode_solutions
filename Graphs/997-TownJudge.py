@@ -20,3 +20,6 @@ X = Solution()
 
 trust = [[1,3],[2,3]]
 print(X.findJudge(3,trust))
+
+# Time Complexity : O(E) , E = edges in trust
+# Space Complexity : O(N) = N = Number of people

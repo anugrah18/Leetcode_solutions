@@ -26,3 +26,6 @@ class Solution:
 
 X = Solution()
 print(X.exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]],"ABCCED"))
+
+# Time Complexity : O(MN) , MN = lenght of grid
+# Space Complexity : O(L) , L = length of the word to be matched

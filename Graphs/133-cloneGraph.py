@@ -40,5 +40,7 @@ node_copy = X.cloneGraph(node1)
 
 X.dfs(node_copy)
 
+# Time Complexity : O(N+M) , N = number of nodes , M = number of edges
+# Space Complexity : O(N)
 
 

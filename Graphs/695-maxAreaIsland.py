@@ -22,3 +22,6 @@ class Solution:
 
 X = Solution()
 print(X.maxAreaOfIsland([[1,1,0,0,0],[1,1,0,0,0],[0,0,0,1,1],[0,0,0,1,1]]))
+
+# Time Complexity : O(RC), R = number of rows and C = number of column
+# Space Complexity : O(RC)

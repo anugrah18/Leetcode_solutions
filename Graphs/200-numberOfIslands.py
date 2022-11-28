@@ -27,3 +27,6 @@ island = [
 ]
 
 print(X.num_of_islands(island))
+
+# Time Complexity : O(MN), M = number of rows and N = number of columns
+# Space Complexity : O(MN)

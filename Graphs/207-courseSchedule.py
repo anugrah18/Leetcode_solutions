@@ -37,3 +37,6 @@ class Solution(object):
 
 X =Solution()
 print(X.canFinish(4,[[1,0],[2,1],[3,2]]))
+
+# Time Complexity : O(E+V), V = number of courses , E = number of dependencies
+# Space Complexity : O(E+V)

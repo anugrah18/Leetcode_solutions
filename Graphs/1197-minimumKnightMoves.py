@@ -28,3 +28,7 @@ class Solution:
 
 X = Solution()
 print(X.minKnightMoves(5,5))
+
+# Time Complexity : O(max(x,y)^2) , since we are restricting into one quadrant maximum square of either x,y as side
+# Space Complexity : O(max(x,y)^2)
+

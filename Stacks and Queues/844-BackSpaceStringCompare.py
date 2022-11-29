@@ -20,3 +20,6 @@ class Solution:
 
 X = Solution()
 print(X.backspaceCompare("ab#c","ad#c"))
+
+# Time Complexity : O(M+N)
+# Space Complexity : O(M+N)

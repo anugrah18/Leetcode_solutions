@@ -16,8 +16,8 @@ class Solution(object):
         else:
             return False
 
-
-
-
 X = Solution()
 print(X.isValid("{(){}[]}"))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

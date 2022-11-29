@@ -21,3 +21,6 @@ print(X.next(1))
 print(X.next(10))
 print(X.next(3))
 print(X.next(5))
+
+# Time Complexity : O(1)
+# Space Complexity : O(N)

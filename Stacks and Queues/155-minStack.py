@@ -1,23 +1,24 @@
-class MinStack(object):
+class MinStack:
 
     def __init__(self):
         self.stack = []
+        self.min_stack = []
 
-    def push(self, x):
-        if not self.stack:
-            self.stack.append((x, x))
-            return
-        curr_min = self.stack[-1][1]
-        self.stack.append((x, min(curr_min, x)))
+    def push(self, x: int) -> None:
+        self.stack.append(x)
+        if not self.min_stack or x <= self.min_stack[-1]:
+            self.min_stack.append(x)
 
-    def pop(self):
+    def pop(self) -> None:
+        if self.min_stack[-1] == self.stack[-1]:
+            self.min_stack.pop()
         self.stack.pop()
 
-    def top(self):
-        return self.stack[-1][0]
+    def top(self) -> int:
+        return self.stack[-1]
 
-    def getMin(self):
-        return self.stack[-1][1]
+    def getMin(self) -> int:
+        return self.min_stack[-1]
 
 # Your MinStack object will be instantiated and called as such:
 obj = MinStack()
@@ -31,3 +32,6 @@ print(obj.getMin())
 # obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.getMin()
+
+# Time Complexity : O(1)
+# Space Complexity : O(N)

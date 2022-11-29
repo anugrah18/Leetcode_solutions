@@ -34,3 +34,6 @@ class Solution:
 X = Solution()
 print(X.RemoveDuplicates_I("deeedbbcccbdaa",3))
 print(X.RemoveDuplicates_II("deeedbbcccbdaa",3))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

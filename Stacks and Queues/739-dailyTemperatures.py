@@ -32,3 +32,6 @@ class Solution:
 X = Solution()
 print(X.dailyTemperatures_I([73,74,75,71,69,72,76,73]))
 print(X.dailyTemperatures_II([73,74,75,71,69,72,76,73]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

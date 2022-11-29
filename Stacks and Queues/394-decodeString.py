@@ -21,3 +21,6 @@ class Solution(object):
 X = Solution()
 print(X.decodeString("3[a2[c]]"))
 
+# Time Complexity : O(N) , N= total number of characters
+# Space Complexity : O(N)
+

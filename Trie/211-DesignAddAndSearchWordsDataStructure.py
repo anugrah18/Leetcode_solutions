@@ -48,3 +48,6 @@ print(wordDictionary.search("pad"))
 print(wordDictionary.search("bad"))
 print(wordDictionary.search(".ad"))
 print(wordDictionary.search("b.."))
+
+# Time Complexity : O(N) , N = length of keys
+# Space Complexity : O(N) , N = length of keys

@@ -42,3 +42,6 @@ print(trie.search("app"))
 print(trie.startsWith("app"))
 print(trie.insert("app"))
 print(trie.search("app"))
+
+# Time Complexity : O(N) , N = length of keys
+# Space Complexity : O(N) , N = length of keys

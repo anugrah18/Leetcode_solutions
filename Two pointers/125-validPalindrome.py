@@ -15,3 +15,6 @@ class Solution(object):
 
 X = Solution()
 print(X.isPalindrome("A man, a plan, a canal: Panama"))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

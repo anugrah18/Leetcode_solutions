@@ -19,3 +19,6 @@ class Solution(object):
 
 X = Solution()
 print(X.threeSum([-1,0,1,2,-1,-4]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)

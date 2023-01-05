@@ -34,3 +34,7 @@ class Solution:
 
 X = Solution()
 print(X.longestDiverseString(1,1,7))
+
+
+# Time Complexity : O(klogN) , k = number of characters
+# Space Complexity : O(2*k)

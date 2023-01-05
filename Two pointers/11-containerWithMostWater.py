@@ -16,3 +16,5 @@ class Solution:
 X = Solution()
 print(X.maxArea([1,8,6,2,5,4,8,3,7]))
 
+# Time Complexity : O(N)
+# Space Complexity : O(1)

@@ -2,10 +2,14 @@ import heapq
 
 class Solution:
     # Approach I : Using Heap
+    # Time Complexity : O(Nlogk)
+    # Space Complexity : O(k)
     def findKthLargest_I(self,nums,k):
         return heapq.nlargest(k,nums)[-1]
 
     # Approach II : Using Quick select
+    # Time Complexity : O(N) in average case but O(N^2) in worst case
+    # Space Complexity : O(1)
     def findKthLargest_II(self,nums,k):
         k =len(nums)-k
 

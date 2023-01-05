@@ -1,6 +1,9 @@
 import heapq
 
 class Solution:
+    # Approach 1
+    # Time Complexity : O(NlogN)
+    # Space Complexity : O(2*N)
     def reorganizeString_I(self,s):
         dict = {}
         for c in s:
@@ -30,7 +33,9 @@ class Solution:
 
         return res
 
-
+    # Approach 2
+    # Time Complexity : O(NlogN)
+    # Space Complexity : O(2*N)
     def reorganizeString_II(self,S):
 
         dict = {}

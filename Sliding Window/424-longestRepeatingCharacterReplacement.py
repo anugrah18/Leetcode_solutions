@@ -16,3 +16,6 @@ class Solution:
 
 X = Solution()
 print(X.characterReplacement("ABAB",2))
+
+# Time Complexity : O(n)
+# Space complexity : O(m) m = number of unique characters

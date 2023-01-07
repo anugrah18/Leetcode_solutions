@@ -17,3 +17,6 @@ class Solution:
 
 X= Solution()
 print(X.findMin([3,4,5,1,2]))
+
+# Time complexity : O(logN)
+# Space complexity : O(1)

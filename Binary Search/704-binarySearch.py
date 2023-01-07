@@ -16,3 +16,6 @@ class Solution:
 
 X = Solution()
 print(X.search([-1,0,3,5,9,12],9))
+
+# Time Complexity : O(logN)
+# Space Complexity : O(1)

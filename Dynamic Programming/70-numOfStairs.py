@@ -17,3 +17,7 @@ class Solution(object):
 
 X = Solution()
 print(X.climbStairs(3))
+
+# Time Complexity : O(N)
+# Space Complexity : O(N)
+

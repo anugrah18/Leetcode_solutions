@@ -18,3 +18,7 @@ X = Solution()
 ans = X.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
 
 print(ans)
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)
+

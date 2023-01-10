@@ -21,3 +21,6 @@ class Solution:
 X = Solution()
 print(X.maxProduct([2,3,-2,4]))
 
+# Time Complexity : O(N)
+# Space Complexity : O(1)
+

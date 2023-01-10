@@ -16,3 +16,5 @@ X =Solution()
 houses = [2,7,9,3,1,7]
 print(X.rob(houses))
 
+# Time Complexity : O(N)
+# Space Complexity : O(N)

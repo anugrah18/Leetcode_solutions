@@ -14,3 +14,9 @@ class Solution:
 
 X = Solution()
 print(X.lengthOfLIS([10,9,2,5,3,7,101,18]))
+
+
+# Time Complexity : O(N*N)
+# Space Complexity : O(N)
+
+

@@ -20,3 +20,7 @@ class Solution:
 
 X = Solution()
 print(X.maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]))
+
+# Time Complexity : O(M*N)
+# Space Complexity : O(M*N)
+

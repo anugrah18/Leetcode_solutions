@@ -10,3 +10,7 @@ class Solution(object):
 
 X = Solution()
 print(X.coinChange([1,2,5],11))
+
+
+# Time Complexity : O(N*M) , where N = amount , M = count of denomintior
+# Space Complexity : O(N)

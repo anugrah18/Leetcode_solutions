@@ -15,3 +15,7 @@ class Solution:
 
 X = Solution()
 print(X.longestCommonSubsequence("abcde","ace"))
+
+
+# Time Complexity : O(M*N)
+# Space Complexity : O(M*N)

@@ -13,3 +13,7 @@ class Solution:
 
 X = Solution()
 print(X.wordBreak('leetcode',['leet','code']))
+
+# Time Complexity : O(N^3) , N^2 for loops and additional N for substring computation.
+# Space Complexity : O(N)
+

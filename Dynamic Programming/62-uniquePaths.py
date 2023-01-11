@@ -10,3 +10,7 @@ class Solution:
 
 X = Solution()
 print(X.uniquePaths(3,7))
+
+
+# Time Complexity : O(M*N)
+# Space Complexity : O(M*N)

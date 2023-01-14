@@ -14,3 +14,6 @@ class Solution:
 
 X= Solution()
 print(X.minCost("abaac",[1,2,3,4,5]))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

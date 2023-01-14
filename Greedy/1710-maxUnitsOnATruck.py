@@ -15,3 +15,6 @@ class Solution:
 
 X = Solution()
 print(X.maximumUnits([[1,3],[2,2],[3,1]],4))
+
+# Time Complexity : O(NlogN)
+# Space Complexity : O(1)

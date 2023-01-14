@@ -17,4 +17,5 @@ class Solution:
 X = Solution()
 print(X.canCompleteCircuit([1,2,3,4,5],[3,4,5,1,2]))
 
-
+# Time Complexity : O(N)
+# Space Complexity : O(1)

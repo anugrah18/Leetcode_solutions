@@ -27,3 +27,6 @@ class Solution:
 
 X = Solution()
 print(X.minMeetingRooms([[0,30],[5,10],[15,20]]))
+
+# Time Complexity : O(NLogN)
+# Space Complexity : O(N)

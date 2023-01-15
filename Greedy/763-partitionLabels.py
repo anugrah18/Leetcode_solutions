@@ -22,3 +22,6 @@ class Solution:
 
 X =Solution()
 print(X.partitionLabels("ababcbacadefegdehijhklij"))
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

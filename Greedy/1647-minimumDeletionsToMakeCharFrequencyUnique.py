@@ -1,5 +1,7 @@
 class Solution:
     def minDeletion_I(self,s):
+        # Time Complexity : O(N)
+        # Space Complexity : O(N)
         # Store the frequency of each character
         frequency = [0] * 26
         for char in s:
@@ -20,6 +22,8 @@ class Solution:
         return delete_count
 
     def minDeletion_II(self,s):
+        # Time Complexity : O(N)
+        # Space Complexity : O(N)
         freq=[0]*26
         count=0
 

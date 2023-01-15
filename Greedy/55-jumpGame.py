@@ -13,3 +13,7 @@ class Solution:
 
 X = Solution()
 print(X.canJump([2,3,1,1,4]))
+
+
+# Time Complexity : O(N)
+# Space Complexity : O(1)

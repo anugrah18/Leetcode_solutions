@@ -1,6 +1,9 @@
 import heapq
-# Using Greedy approach.
+
 class Solution:
+# Using Greedy approach.
+# Time Complexity : O(N) , N = number of tasks
+# Space Complexity : O(1)
     def leastInterval_I(self, tasks, n):
 
         freq = [0] * 26
@@ -21,6 +24,8 @@ class Solution:
         return idle_time + len(tasks)
 
 # Using maxHeap.
+# Time Complexity : O(N) , N = number of tasks
+# Space Complexity : O(N)
     def leastInterval_II(self, tasks, n):
         dict = {}
         maxHeap = []

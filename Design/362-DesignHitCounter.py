@@ -19,3 +19,6 @@ X.hit(251)
 X.hit(299)
 X.hit(301)
 print(X.getHits(302))
+
+# Time Complexity : O(1) for hit and O(N) for getHits
+# Space Complexity: O(N)

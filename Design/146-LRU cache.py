@@ -9,6 +9,8 @@ class DLinkedNode():
         self.next = None
 
 # Using Ordered Dictionary
+# Time Complexity : O(1) for both operations put and get
+# Space Complexity: O(capactiy)
 class LRUCache_I:
 
     def __init__(self, capacity: int):
@@ -31,6 +33,8 @@ class LRUCache_I:
 
 
 # Using Double Linked List
+# Time Complexity : O(1) for both operations put and get
+# Space Complexity: O(capactiy)
 class LRUCache_II():
     def _add_node(self, node):
         """

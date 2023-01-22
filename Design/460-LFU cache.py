@@ -5,6 +5,8 @@ class Node:
         self.val = value
         self.count = count
 
+# Time Complexity : O(1) for both operations put and get
+# Space Complexity: O(N)
 
 class LFUCache:
 

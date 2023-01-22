@@ -31,3 +31,7 @@ print(X.checkIn(10, "Leyton", 24))
 print(X.getAverageTime("Leyton", "Waterloo"))
 print(X.checkOut(10, "Waterloo", 38))
 print(X.getAverageTime("Leyton", "Waterloo"))
+
+
+# Time Complexity : O(1) for all operations
+# Space Complexity: O(P+S^2) , pair of stations getting stored in journey_data

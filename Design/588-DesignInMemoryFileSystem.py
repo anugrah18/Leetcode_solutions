@@ -10,6 +10,8 @@ class FileSystem:
     def __init__(self):
         self.head = Node('head')
 
+    # Time Complexity : O(M + KlogK) M = longest path , K = number of keys in next of last node
+    # Space Complexity: O(M)
     def ls(self, path: str):
         path = path.split('/')
 
@@ -27,6 +29,8 @@ class FileSystem:
         else:
             return [fileName]
 
+    # Time Complexity : O(M)
+    # Space Complexity: O(M)
     def mkdir(self, path: str) -> None:
         curr = self.head
         path = path.split('/')
@@ -39,6 +43,8 @@ class FileSystem:
                     curr.next[i] = Node('')
                     curr = curr.next[i]
 
+    # Time Complexity : O(M)
+    # Space Complexity: O(M)
     def addContentToFile(self, filePath: str, content: str) -> None:
         filePath = filePath.split('/')
         curr = self.head
@@ -52,6 +58,8 @@ class FileSystem:
         curr.content += content
         curr.isFile = True
 
+    # Time Complexity : O(M)
+    # Space Complexity: O(M)
     def readContentFromFile(self, filePath: str) -> str:
         filePath = filePath.split('/')
         curr = self.head
